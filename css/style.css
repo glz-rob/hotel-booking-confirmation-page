@@ -107,6 +107,11 @@ nav a {
     text-decoration: none;
 }
 
+nav a:hover {
+    background-color: var(--NEUTRAL-50);
+    box-shadow: 2px 2px 5px var(--NEUTRAL-200);
+}
+
 .weather {
     background-color: var(--SUN-300);
     border-radius: 0.8rem;
