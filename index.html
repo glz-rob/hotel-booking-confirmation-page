@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="css/style.css">
+
+  <title>Frontend Mentor | Hotel booking confirmation page</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution {
+      font-size: 0.6875rem;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="content">
+
+    <!-- Sidebar starts -->
+    <div class="sidebar">
+
+      Maison Soleil
+
+      <hr>
+
+      <!-- Guest navigation -->
+      <nav>
+        <a href="#">Your stay</a>
+        <a href="#">1</a>
+        <a href="#">The house</a>
+        <a href="#">Around town</a>
+        <a href="#">Breakfast</a>
+        <a href="#">Messages</a>
+      </nav>
+
+      <!-- Local weather -->
+      <div class="weather">
+        <p class="location">Today in Cassis</p>
+        <p class="temperature">27°</p>
+        <p class="forecast">Sunny · light breeze</p>
+      </div>
+
+      <hr>
+
+      <div class="copyright">
+        <p>Est. 1987</p>
+        <p>Maison Soleil · 12 Rue des Oliviers · Cassis</p>
+        <p>© 2026 Maison Soleil</p>
+      </div>
+
+    </div>
+    <!-- Sidebar ends -->
+
+
+    <!-- Main content starts -->
+    <main>
+
+      <div class="header">
+        <p>Booking · Confirmed</p>
+        <h1>Bienvenue, Lucia.</h1>
+
+        <button>Print receipt</button>
+        <button>Add to calendar</button>
+      </div>
+
+      <!-- Booking cards start -->
+
+      <div class="booking-cards">
+        <!-- Receipt card -->
+        <div class="receipt">
+          Receipt
+          № MS-2026
+          0421-AH
+
+          Your stay
+
+          Check in
+          25 Apr
+          Saturday · 15:00
+
+          Check out
+          29 Apr
+          Wednesday · 11:00
+
+          Room · La Garrigue · 4 nights
+          € 620.00
+          Breakfast · 2 guests
+          € 96.00
+          Tourist tax
+          € 14.40
+
+          Total paid
+          € 730.40
+
+          Paid · Wise · GBP
+          <!-- Barcode image -->
+        </div>
+
+        <!-- Note from host card -->
+        <div class="note">
+          Welcome
+          A note from your host, Margaux.
+          We're so glad you're coming. The shutters will be open, the lemonade cold, and the cat - Poivre - pretending
+          not
+          to
+          notice you.
+          Room
+          La Garrigue
+        </div>
+      </div>
+      <!-- Booking cards end -->
+
+      <!-- Guest info row starts -->
+      <div class="guest-info">
+        <div class="guest-info__card">
+          <!-- Arrival -->
+          <div class="guest-info__header">
+            <p class="guest-info__header-title">Arrival</p>
+            <p class="guest-info__header-number">01</p>
+          </div>
+
+          <div>
+            <p class="guest-info__title">Check-in from 15:00</p>
+            <p class="guest-info__subtitle">Sat, 25 April</p>
+          </div>
+
+          <p>Ring the brass bell by the blue door. If we're at the market, the key is in the terracotta pot by the olive tree.</p>
+        </div>
+
+        <div class="guest-info__card">
+          <!-- Wifi -->
+          <div class="guest-info__header">
+            <p class="guest-info__header-title">Wifi</p>
+            <p class="guest-info__header-number">02</p>
+          </div>
+
+          <div>
+            <p class="guest-info__title">Le Soleil · Guest</p>
+            <p class="guest-info__subtitle">Password below</p>
+          </div>
+
+          <p>Network</p>
+          <p>Le Soleil · Guest</p>
+          <p>Password</p>
+          <p>soleil-2026</p>
+          <p>Copy</p>
+        </div>
+
+        <div class="guest-info__card">
+          <!-- Breakfast -->
+          <div class="guest-info__header">
+            <p class="guest-info__header-title">Breakfast</p>
+            <p class="guest-info__header-number">03</p>
+          </div>
+
+          <div>
+            <p class="guest-info__title">Served 8 - 10:30</p>
+            <p class="guest-info__subtitle">On the terrace</p>
+          </div>
+
+          <p>Fresh figs, Marseille honey, pain au levain, and espresso. Gluten-free option? Leave a note the night
+            before.</p>
+        </div>
+      </div>
+
+      <!-- Guest info row ends -->
+
+    </main>
+    <!-- Main content ends -->
+
+  </div>
+
+  <!-- <footer class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
+    Coded by <a href="#">Rob</a>.
+  </footer> -->
+</body>
+
+</html>
