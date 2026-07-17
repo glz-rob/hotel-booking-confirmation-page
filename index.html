@@ -30,35 +30,44 @@
     <!-- Sidebar starts -->
     <div class="sidebar">
 
-      Maison Soleil
+      <div class="sidebar__top">
+        <div class="sidebar__brand">
+          <img src="assets/images/illustration-sun.svg" width="32" height="32"></img>
+          <div class="sidebar__brand-title">
+            <span class="terracota">Maison</span> Soleil
+          </div>
+        </div>
 
-      <hr>
+        <hr>
 
-      <!-- Guest navigation -->
-      <nav>
-        <a href="#">Your stay</a>
-        <a href="#">1</a>
-        <a href="#">The house</a>
-        <a href="#">Around town</a>
-        <a href="#">Breakfast</a>
-        <a href="#">Messages</a>
-      </nav>
-
-      <!-- Local weather -->
-      <div class="weather">
-        <p class="location">Today in Cassis</p>
-        <p class="temperature">27°</p>
-        <p class="forecast">Sunny · light breeze</p>
+        <!-- Guest navigation -->
+        <nav>
+          <a><img src="assets/images/icon-bed.svg" alt="Icon description" width="16" height="16">
+            Your stay 1</a>
+          <a><img src="assets/images/icon-house.svg" alt="Icon description" width="16" height="16">The house</a>
+          <a><img src="assets/images/icon-pin.svg" alt="Icon description" width="16" height="16">Around town</a>
+          <a><img src="assets/images/icon-breakfast-outline.svg" alt="Icon description" width="16"
+              height="16">Breakfast</a>
+          <a><img src="assets/images/icon-mail.svg" alt="Icon description" width="16" height="16">Messages</a>
+        </nav>
       </div>
 
-      <hr>
+      <div class="sidebar__bottom">
+        <!-- Local weather -->
+        <div class="weather">
+          <p class="location">Today in Cassis</p>
+          <p class="temperature">27°</p>
+          <p class="forecast">Sunny · light breeze</p>
+        </div>
 
-      <div class="copyright">
-        <p>Est. 1987</p>
-        <p>Maison Soleil · 12 Rue des Oliviers · Cassis</p>
-        <p>© 2026 Maison Soleil</p>
+        <hr>
+
+        <div class="copyright">
+          <p>Est. 1987</p>
+          <p>Maison Soleil · 12 Rue des Oliviers · Cassis</p>
+          <p>© 2026 Maison Soleil</p>
+        </div>
       </div>
-
     </div>
     <!-- Sidebar ends -->
 
@@ -67,18 +76,22 @@
     <main>
 
       <div class="header">
-        <p>Booking · Confirmed</p>
-        <h1>Bienvenue, Lucia.</h1>
+        <div>
+          <p class="header__subtitle">Booking · Confirmed</p>
+          <h1 class="header__title">Bienvenue, <span class="terracota">Lucia.</span></h1>
+        </div>
 
-        <button>Print receipt</button>
-        <button>Add to calendar</button>
+        <div>
+          <button class="print">Print receipt</button>
+          <button class="add-to-calendar">Add to calendar</button>
+        </div>
       </div>
 
       <!-- Booking cards start -->
 
       <div class="booking-cards">
         <!-- Receipt card -->
-        <div class="receipt">
+        <div class="receipt booking-card">
           Receipt
           № MS-2026
           0421-AH
@@ -108,7 +121,8 @@
         </div>
 
         <!-- Note from host card -->
-        <div class="note">
+        <div class="note booking-card">
+          <!-- <hr> -->
           Welcome
           A note from your host, Margaux.
           We're so glad you're coming. The shutters will be open, the lemonade cold, and the cat - Poivre - pretending
@@ -135,7 +149,8 @@
             <p class="guest-info__subtitle">Sat, 25 April</p>
           </div>
 
-          <p>Ring the brass bell by the blue door. If we're at the market, the key is in the terracotta pot by the olive tree.</p>
+          <p>Ring the brass bell by the blue door. If we're at the market, the key is in the terracotta pot by the olive
+            tree.</p>
         </div>
 
         <div class="guest-info__card">
