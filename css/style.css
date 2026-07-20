@@ -74,34 +74,49 @@ body {
 hr { border: 1px solid var(--NEUTRAL-400); }
 
 /* || SIDEBAR */
+/* SIDEBAR TOP */
 .sidebar {
     border-right: 1px solid;
+    color: var(--NEUTRAL-800);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     height: 100vh;
     min-width: 20%;
-    padding: 0.4rem 0.8rem 0.8rem 0.8rem;
+    padding: 1rem;
 }
 
 .sidebar__brand {
     align-items: center;
     display: flex;
+    padding-top: 0.2rem;
+    padding-bottom: 1.2rem;
+}
+
+.sidebar__brand img {
+    padding: 0.2rem;
 }
 
 .sidebar__brand-title {
     font-family: var(--FONT-HEADER);
-    font-weight: var(--FONT-BOLDER);
+    font-size: 1.4rem;
+    line-height: 1.6rem;
+    margin-left: 0.5rem;
+    max-width: 5rem;
 }
 
+/* || NAV */
 nav {
     display: flex;
     flex-direction: column;
+    gap: 0.2rem;
+    padding-top: 1rem;
 }
 
 nav a {
-    align-content: center;
+    align-items: center;
     border-radius: 0.6rem;
+    color: var(--NEUTRAL-600);
     display: flex;
     padding: 0.6rem;
     text-decoration: none;
@@ -110,21 +125,46 @@ nav a {
 nav a:hover {
     background-color: var(--NEUTRAL-50);
     box-shadow: 2px 2px 5px var(--NEUTRAL-200);
+    color: var(--NEUTRAL-800);
 }
 
+nav a img {
+    fill: var(--BLUE-500);
+    margin-right: 0.4rem;
+}
+
+/* SIDEBAR BOTTOM */
 .weather {
     background-color: var(--SUN-300);
     border-radius: 0.8rem;
+    color: var(--NEUTRAL-600);
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
     padding: 0.8rem;
+    align-items: center;
+}
+
+.weather__info {
+    align-content: space-between;
+}
+
+.weather img {
+    /* top: -32px;
+    right: -32px; */
+    position: relative;
 }
 
 .location {
-    font: var(--FS) var(--FONT-MONO);
+    font: 0.6rem var(--FONT-MONO);
+    letter-spacing: 0.08rem;
     text-transform: uppercase;
 }
 
 .temperature {
-    font: var(--FS) var(--FONT-HEADER);
+    color: var(--NEUTRAL-800);
+    font: 2rem var(--FONT-HEADER);
+    /* padding: 0.4rem 0 0.4rem 0; */
 }
 
 .forecast {
