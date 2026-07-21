@@ -51,6 +51,7 @@ textarea {
     --FONT-SANS: "DM Sans";
     --FONT-MONO: "DM Mono";
 
+    --FW-LIGHT: 300;
     --FW-NORMAL: 400;
     --FW-BOLD: 500;
     --FW-BOLDER: 600;
@@ -64,12 +65,21 @@ textarea {
 body {
     background-color: var(--BG-COLOR);
     color: var(--NEUTRAL-800);
+    display: flex;
+    flex-direction: column;
     font: var(--FS) var(--FONT-SANS);
     font-weight: var(--FW-NORMAL);
     justify-self: center;
     max-width: 1440px;
     min-height: 100vh;
     width: 100vw;
+}
+
+a,
+a:hover,
+a:visited {
+    color: currentColor;
+    text-decoration: none;
 }
 
 span.terracota {
@@ -80,14 +90,15 @@ span.terracota {
 
 /* || SIDEBAR/MENU STYLING */
 .sidebar {
-    height: 100vh;
-    padding: 0.8rem;
+    background-color: var(--NEUTRAL-100);
+    height: 100%;
+    padding: 0.8rem 0.8rem 0 0.8rem;
+    z-index: 1;
 }
 
 .title-line {
     align-items: center;
     background-color: var(--BG-COLOR);
-    border-bottom: 2px solid var(--NEUTRAL-200);
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
@@ -162,23 +173,28 @@ span.terracota {
     transform: translateX(-50%) rotate(-45deg);
 }
 
-/* :is(.title-line:hover, .title-line:focus-within) + .sidebar__content {
-    display: block;
-} */
+:is(.title-line:hover, .title-line:focus-within)+.sidebar__content,
+.sidebar__content:hover {
+    display: flex;
+    height: 86vh;
+}
 
 /* ||| NAV STYLING */
 .sidebar__content {
-    display: flex;
+    background-color: var(--NEUTRAL-100);
+    border-top: 2px solid var(--NEUTRAL-200);
+    display: none;
     flex-direction: column;
-    height: 92%;
+    height: 0;
+    overflow-y: hidden;
     justify-content: space-between;
     padding-top: 1rem;
 
-    animation: showMenu 0.5s ease forwards;
-    transform-origin: top center;
+    /* animation: showMenu 0.5s ease forwards; */
+    /* transform-origin: top center; */
 }
 
-@keyframes showMenu {
+/* @keyframes showMenu {
     0% {
         transform: scaleY(0);
     }
@@ -190,7 +206,7 @@ span.terracota {
     100% {
         transform: scaleY(1);
     }
-}
+} */
 
 nav ul {
     display: flex;
@@ -296,9 +312,140 @@ nav ul li .notification {
 }
 
 /* || MAIN CONTENT STYLING */
+/* hides the main content when the sidebar menu is open */
+:has(:is(.title-line:hover, .title-line:focus-within) + .sidebar__content, .sidebar__content:hover)~main {
+    display: none;
+}
+
+main {
+    border-top: 2px solid var(--NEUTRAL-200);
+    padding: 1rem;
+}
+
+/* || HEADER */
+.subheading {
+    color: var(--NEUTRAL-600);
+    font-family: var(--FONT-MONO);
+    font-size: 0.7rem;
+    letter-spacing: 0.2rem;
+    padding-bottom: 0.5rem;
+    text-transform: uppercase;
+}
+
+.heading {
+    font-family: var(--FONT-HEADER);
+    font-size: 2rem;
+    padding: 0.5rem 0;
+}
+
+.header__buttons {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    justify-content: space-between;
+    padding: 1rem 0;
+}
+
+.header__buttons button {
+    border-radius: 3rem;
+    flex: 1;
+    font-size: 0.7rem;
+    font-weight: var(--FW-BOLD);
+    padding: 0.4rem;
+}
+
+.print-receipt {
+    background-color: var(--NEUTRAL-50);
+    border: 1px solid var(--NEUTRAL-200);
+    color: var(--NEUTRAL-900);
+}
+
+.add-to-calendar {
+    background-color: var(--NEUTRAL-900);
+    border: 1px solid var(--NEUTRAL-900);
+    color: var(--NEUTRAL-50);
+}
+
+/* || BOOKING CARDS */
+.booking-cards {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 1rem;
+    padding: 0.1rem;
+}
+
+.receipt-card,
+.note-card {
+    border-radius: 1rem;
+    min-height: 15rem;
+    scale: 0.95;
+}
+
+.receipt-card {
+    transform: rotate(-1deg);
+}
+
+/* ||| NOTE CARD */
+.note-card {
+    background-color: var(--TERRACOTA-500);
+    background-image: radial-gradient(farthest-corner at 90% 0%,
+            var(--TERRACOTA-400),
+            var(--TERRACOTA-700));
+    box-shadow: 2px 4px 18px -2px var(--TERRACOTA-400);
+    color: var(--NEUTRAL-400);
+    font-weight: var(--FW-LIGHT);
+    padding: 1rem;
+    transform: rotate(1deg);
+}
+
+.note-card__header {
+    border-top: 1px dashed var(--TERRACOTA-400);
+    display: flex;
+    flex-direction: row;
+    font-family: var(--FONT-MONO);
+    font-size: 0.5rem;
+    justify-content: space-between;
+    letter-spacing: 0.08rem;
+    padding: 0.8rem 0;
+    text-transform: uppercase;
+}
+
+.note-card__title {
+    font-family: var(--FONT-HEADER);
+    font-size: 1rem;
+    font-style: italic;
+    padding-bottom: 1rem;
+}
+
+.note-card__host {
+    font-size: 2rem;
+}
+
+.note-card p {
+    font-size: 0.8rem;
+}
+
+.note-card__footer {
+    margin-top: 3.5rem;
+}
+
+.note-card__footer_sub {
+    font-family: var(--FONT-MONO);
+    font-size: 0.7rem;
+    text-transform: uppercase;
+}
+
+.note-card__footer_room {
+    font-family: var(--FONT-HEADER);
+    font-size: 1.1rem;
+    padding-top: 0.2rem;
+}
 
 /* || DEBUGGING STYLES */
-main,
+.guest-info {
+    display: none;
+}
+
 .attribution {
     display: none;
 }
