@@ -377,13 +377,102 @@ main {
 .receipt-card,
 .note-card {
     border-radius: 1rem;
-    min-height: 15rem;
+    font-weight: var(--FW-LIGHT);
+    min-height: 300px;
+    padding: 1rem;
     scale: 0.95;
 }
 
+/* ||| RECEIPT CARD */
 .receipt-card {
-    transform: rotate(-1deg);
+    background-color: var(--NEUTRAL-100);
+    box-shadow: 0.1rem 0.5rem 1rem -0.6rem var(--NEUTRAL-600);
+    transform: rotate(-2deg);
 }
+
+/* RECEIPT CARD HEADER */
+.receipt-card__header, .receipt-card__date-row {
+    border-bottom: 1px dashed var(--NEUTRAL-400);
+}
+
+.receipt-card__subtitle-row {
+    color: var(--NEUTRAL-600);
+    display: flex;
+    justify-content: space-between;
+}
+
+.receipt-card__subtitle, .receipt-card__folio, .receipt-card__number {
+    font-family: var(--FONT-MONO);
+    font-size: 0.5rem;
+    letter-spacing: 0.05rem;
+    text-transform: uppercase;
+}
+
+.receipt-card__info {
+    text-align: right;
+}
+
+.receipt-card__title {
+    font-family: var(--FONT-HEADER);
+    font-weight: var(--FW-BOLD);
+    font-size: 1rem;
+    padding-bottom: 0.6rem;
+}
+
+/* RECEIPT CARD DATE */
+.receipt-card__date-row {
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    padding: 0.8rem 0;
+    text-align: center;
+}
+
+.receipt-card__datename {
+    font-family: var(--FONT-MONO);
+    font-size: 0.5rem;
+    letter-spacing: 0.04rem;
+    text-transform: uppercase;
+}
+
+.receipt-card__day {
+    font-family: var(--FONT-HEADER);
+    font-weight: var(--FW-BOLD);
+    font-size: 1.6rem;
+    padding-top: 0.4rem;
+}
+
+.receipt-card__weekday {
+    font-family: var(--FONT-SANS);
+    font-size: 0.7rem;
+    padding-top: 0.2rem;
+}
+
+/* RECEIPT CARD BREAKDOWN */
+.receipt-card__breakdown {
+    padding: 0.4rem 0;
+}
+
+.receipt-card__row {
+    display: flex;
+    font-family: var(--FONT-SANS);
+    font-size: 0.8rem;
+    font-weight: var(--FW-BOLD);
+    justify-content: space-between;
+}
+
+/* .receipt-card__row:last-child() {
+    font-weight: normal;
+} */
+
+.receipt-card__concept {}
+.receipt-card__amount {}
+
+.receipt-card__total-row {}
+.receipt-card__total-concept {}
+.receipt-card__total-amount {}
+
+/* RECEIPT CARD FOOTER */
 
 /* ||| NOTE CARD */
 .note-card {
@@ -391,11 +480,9 @@ main {
     background-image: radial-gradient(farthest-corner at 90% 0%,
             var(--TERRACOTA-400),
             var(--TERRACOTA-700));
-    box-shadow: 2px 4px 18px -2px var(--TERRACOTA-400);
+    box-shadow: 0.2rem 0.5rem 1.5rem -0.2rem var(--TERRACOTA-400);
     color: var(--NEUTRAL-400);
-    font-weight: var(--FW-LIGHT);
-    padding: 1rem;
-    transform: rotate(1deg);
+    transform: rotate(2deg);
 }
 
 .note-card__header {
