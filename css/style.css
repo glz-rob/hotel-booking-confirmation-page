@@ -68,7 +68,7 @@ body {
     background-color: var(--BG-COLOR);
     color: var(--NEUTRAL-800);
     display: flex;
-    flex-flow: row wrap;
+    flex-direction: column;
     font: var(--FS) var(--FONT-SANS);
     font-weight: var(--FW-NORMAL);
     justify-content: center;
