@@ -59,6 +59,8 @@ textarea {
     /* || BACKGROUND */
     --BG-COLOR: var(--NEUTRAL-100);
     --HEADER-COLOR: var(--NEUTRAL-600);
+
+    font-size: clamp(var(--FS), 5vw, 1.4rem);
 }
 
 /* || GENERAL STYLING */
@@ -260,7 +262,7 @@ nav ul li .notification {
     margin-bottom: 1rem;
     min-width: 14rem;
     overflow: hidden;
-    padding: 0 1rem;
+    padding: 0.5rem 1rem;
 }
 
 .weather-card__info {
@@ -292,7 +294,7 @@ nav ul li .notification {
 
 .weather-card__icon {
     position: relative;
-    top: -1rem;
+    top: -1.5rem;
     right: -1.5rem;
 }
 
@@ -368,9 +370,11 @@ main {
 
 /* || BOOKING CARDS */
 .booking-cards {
+    align-items: center;
     display: flex;
-    flex-direction: column-reverse;
+    flex-flow: row wrap;
     gap: 1rem;
+    justify-content: center;
     padding: 1rem 0.1rem;
 }
 
@@ -381,6 +385,7 @@ main {
     min-height: 300px;
     padding: 1rem;
     scale: 0.95;
+    width: max(410px, 48%);
 }
 
 /* ||| RECEIPT CARD */
@@ -547,11 +552,13 @@ main {
     font-family: var(--FONT-HEADER);
     font-size: 1rem;
     font-style: italic;
-    padding-bottom: 1rem;
 }
 
 .note-card__host {
+    font-family: var(--FONT-HEADER);
     font-size: 2rem;
+    font-style: italic;
+    padding-bottom: 1rem;
 }
 
 .note-card p {
@@ -587,8 +594,6 @@ main {
     border: 1px solid var(--NEUTRAL-200);
     border-radius: 0.8rem;
     box-shadow: 0.1rem 0.1rem 1rem -0.7rem var(--NEUTRAL-600);
-    /* height: 10rem; */
-    max-width: 20rem;
     padding: 0.8rem;
 }
 
