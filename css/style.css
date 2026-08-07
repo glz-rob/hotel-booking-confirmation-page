@@ -60,7 +60,11 @@ textarea {
     --BG-COLOR: var(--NEUTRAL-100);
     --HEADER-COLOR: var(--NEUTRAL-600);
 
+<<<<<<< HEAD
     font-size: clamp(var(--FS), 5vw, 1.4rem);
+=======
+    font-size: var(--FS);
+>>>>>>> f9861ddf29655410239984e4de67b65c08520d78
 }
 
 /* || GENERAL STYLING */
@@ -71,7 +75,8 @@ body {
     flex-direction: column;
     font: var(--FS) var(--FONT-SANS);
     font-weight: var(--FW-NORMAL);
-    justify-self: center;
+    justify-content: center;
+    margin: auto;
     max-width: 1440px;
     min-height: 100vh;
     width: 100vw;
@@ -136,6 +141,12 @@ span.terracota {
     position: relative;
     height: 2rem;
     width: 2rem;
+}
+
+@media (min-width: 1440px) {
+    .menu-button {
+        display: none;
+    }
 }
 
 .menu-icon,
@@ -383,7 +394,7 @@ main {
     border-radius: 1rem;
     font-weight: var(--FW-LIGHT);
     min-height: 300px;
-    padding: 1rem;
+    padding: 1.5rem;
     scale: 0.95;
     width: max(410px, 48%);
 }
@@ -411,7 +422,7 @@ main {
 .receipt-card__folio,
 .receipt-card__number {
     font-family: var(--FONT-MONO);
-    font-size: 0.5rem;
+    font-size: 0.7rem;
     letter-spacing: 0.05rem;
     text-transform: uppercase;
 }
@@ -423,8 +434,9 @@ main {
 .receipt-card__title {
     font-family: var(--FONT-HEADER);
     font-weight: var(--FW-BOLD);
-    font-size: 1rem;
-    padding-bottom: 0.6rem;
+    font-size: 1.5rem;
+    margin-top: -0.4rem;
+    padding-bottom: 0.8rem;
 }
 
 /* RECEIPT CARD DATE */
@@ -432,13 +444,13 @@ main {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    padding: 0.8rem 0;
+    padding: 1rem 0;
     text-align: center;
 }
 
 .receipt-card__datename {
     font-family: var(--FONT-MONO);
-    font-size: 0.5rem;
+    font-size: 0.8rem;
     letter-spacing: 0.04rem;
     text-transform: uppercase;
 }
@@ -446,31 +458,31 @@ main {
 .receipt-card__day {
     font-family: var(--FONT-HEADER);
     font-weight: var(--FW-BOLD);
-    font-size: 1.6rem;
+    font-size: 2.5rem;
     padding-top: 0.4rem;
 }
 
 .receipt-card__weekday {
     font-family: var(--FONT-SANS);
-    font-size: 0.7rem;
+    font-size: 0.8rem;
     padding-top: 0.2rem;
 }
 
 /* RECEIPT CARD BREAKDOWN */
 .receipt-card__breakdown {
-    padding: 0.4rem 0;
+    padding: 0.6rem 0;
 }
 
 .receipt-card__row {
     display: flex;
-    font-size: 0.65rem;
-    font-weight: var(--FW-NORMAL);
+    font-size: 0.8rem;
+    font-weight: var(--FW-BOLD);
     justify-content: space-between;
     padding: 0.2rem 0;
 }
 
 .receipt-card__row:nth-child(3) {
-    font-weight: var(--FW-LIGHT);
+    font-weight: var(--FW-NORMAL);
     padding-bottom: 0.9rem;
 }
 
@@ -493,14 +505,14 @@ main {
 .receipt-card__total-concept {
     color: var(--NEUTRAL-600);
     font-family: var(--FONT-MONO);
-    font-size: 0.6rem;
+    font-size: 0.8rem;
     letter-spacing: 0.1rem;
     text-transform: uppercase;
 }
 
 .receipt-card__total-amount {
     font-family: var(--FONT-HEADER);
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     font-weight: var(--FW-BOLD);
 }
 
@@ -515,7 +527,7 @@ main {
 .receipt-card__footer__info {
     color: var(--NEUTRAL-600);
     font-family: var(--FONT-MONO);
-    font-size: 0.5rem;
+    font-size: 0.7rem;
     letter-spacing: 0.1rem;
     text-transform: uppercase;
 }
@@ -541,7 +553,7 @@ main {
     display: flex;
     flex-direction: row;
     font-family: var(--FONT-MONO);
-    font-size: 0.5rem;
+    font-size: 0.7rem;
     justify-content: space-between;
     letter-spacing: 0.08rem;
     padding: 0.8rem 0;
@@ -550,19 +562,24 @@ main {
 
 .note-card__title {
     font-family: var(--FONT-HEADER);
-    font-size: 1rem;
+    font-size: 1.2rem;
     font-style: italic;
 }
 
 .note-card__host {
+<<<<<<< HEAD
     font-family: var(--FONT-HEADER);
     font-size: 2rem;
     font-style: italic;
     padding-bottom: 1rem;
+=======
+    font-size: 2.5rem;
+>>>>>>> f9861ddf29655410239984e4de67b65c08520d78
 }
 
-.note-card p {
-    font-size: 0.8rem;
+.note-card__host:before {
+    content: '\A';
+    white-space: pre;
 }
 
 .note-card__footer {
@@ -584,8 +601,9 @@ main {
 /* || GUEST INFO */
 .guest-info {
     display: flex;
-    flex-direction: column;
-    gap: 0.8rem;
+    flex-flow: row wrap;
+    gap: 1rem;
+    justify-content: center;
     padding: 0.8rem 0;
 }
 
@@ -594,7 +612,13 @@ main {
     border: 1px solid var(--NEUTRAL-200);
     border-radius: 0.8rem;
     box-shadow: 0.1rem 0.1rem 1rem -0.7rem var(--NEUTRAL-600);
+<<<<<<< HEAD
     padding: 0.8rem;
+=======
+    /* height: 10rem; */
+    width: 100%;
+    padding: 1.2rem 1rem;
+>>>>>>> f9861ddf29655410239984e4de67b65c08520d78
 }
 
 .card:nth-child(1) {
@@ -638,14 +662,14 @@ main {
 
 .card__heading-title {
     font-family: var(--FONT-MONO);
-    font-size: 0.75rem;
+    font-size: 1rem;
     letter-spacing: 0.05rem;
     text-transform: uppercase;
 }
 
 .card__heading-number {
     font-family: var(--FONT-HEADER);
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     text-transform: uppercase;
 }
 
@@ -655,21 +679,21 @@ main {
 
 .card__main-title {
     font-family: var(--FONT-HEADER);
-    font-size: 1.2rem;
-    padding-bottom: 0.3rem;
+    font-size: 1.5rem;
+    padding-bottom: 0.5rem;
 }
 
 .card__main-subtitle {
     color: var(--NEUTRAL-600);
     font-family: var(--FONT-SANS);
-    font-size: 0.6rem;
+    font-size: 0.8rem;
 }
 
 .card__body {
     color: var(--NEUTRAL-700);
     display: flex;
     flex-direction: column;
-    font-size: 0.75rem;
+    font-size: 1rem;
     gap: 0.3rem;
     padding-top: 0.5rem;
 }
